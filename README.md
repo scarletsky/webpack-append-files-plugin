@@ -19,7 +19,7 @@ module.exports = {
                 'dist/app.js',
             ],
             // output name
-            filename: 'jquery-before-app.js'
+            filename: 'jquery-before-app.[contenthash:8].js'
         }),
     ]
 };
