@@ -2,6 +2,8 @@
 
 This plugin is used to append files after webpack's `afterEmit` hook.
 
+Unlike `entry: ['fileA', 'fileB']`, it just append files like `cat fileA >> fileB` without doing any transpile.
+
 ## Usage
 
 ``` js
