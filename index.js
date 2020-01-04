@@ -40,11 +40,11 @@ WebpackAppendFilesPlugin.prototype.apply = function (compiler) {
     };
 
     compiler.hooks.afterEmit.tapPromise(id, (compilation) => {
-        return this.progess(globalRef).then(() => this.postProcess(globalRef))
+        return this.process(globalRef).then(() => this.postProcess(globalRef))
     });
 };
 
-WebpackAppendFilesPlugin.prototype.progess = function (globalRef) {
+WebpackAppendFilesPlugin.prototype.process = function (globalRef) {
     return new Promise((resolve, reject) => {
         const queue = new PQueue({ concurrency: 1 });
         const { context, outputTempPath } = globalRef;
