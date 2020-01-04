@@ -1,0 +1,12 @@
+{
+  "name": "webpack-concat-files-plugin",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "scarletsky <scarletsky1025@gmail.com> (https://github.com/scarletsky)",
+  "license": "MIT",
+  "dependencies": {
+    "p-queue": "^6.2.1"
+  }
+}
