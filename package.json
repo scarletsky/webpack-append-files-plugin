@@ -1,7 +1,7 @@
 {
   "name": "webpack-append-files-plugin",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.2.0",
+  "description": "Webpack plugin for append files like `cat fileA >> fileB` in shell.",
   "main": "index.js",
   "scripts": {},
   "author": "scarletsky <scarletsky1025@gmail.com> (https://github.com/scarletsky)",
