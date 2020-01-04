@@ -1,17 +1,17 @@
-# webpack-concat-files-plugin
+# webpack-append-files-plugin
 
-This plugin is used to concat files after webpack's `afterEmit` hook.
+This plugin is used to append files after webpack's `afterEmit` hook.
 
 ## Usage
 
 ``` js
-const ConcatFilesPlugin = require('webpack-concat-files-plugin');
+const AppendFilesPlugin = require('webpack-append-files-plugin');
 module.exports = {
     // ...
     plugins: [
         // ... 
-        new ConcatFilesPlugin({
-            // files to concat
+        new AppendFilesPlugin({
+            // files to append
             files: [
                 'public/static/libs/jquery.min.js',
                 'dist/app.js',

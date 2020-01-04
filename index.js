@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { default: PQueue } = require('p-queue');
 
-const id = 'WebpackConcatFilesPlugin';
+const id = 'WebpackAppendFilesPlugin';
 
-function WebpackConcatFilesPlugin(options) {
+function WebpackAppendFilesPlugin(options) {
     if (options === undefined) {
         options = {};
     }
@@ -17,7 +17,7 @@ function WebpackConcatFilesPlugin(options) {
     this.files = options.files || [];
 }
 
-WebpackConcatFilesPlugin.prototype.apply = function (compiler) {
+WebpackAppendFilesPlugin.prototype.apply = function (compiler) {
 
     const { context, output } = compiler.options;
     const outputPath = output.path;
@@ -31,7 +31,7 @@ WebpackConcatFilesPlugin.prototype.apply = function (compiler) {
     });
 };
 
-WebpackConcatFilesPlugin.prototype.progess = function (globalRef) {
+WebpackAppendFilesPlugin.prototype.progess = function (globalRef) {
     return new Promise((resolve, reject) => {
         const queue = new PQueue({ concurrency: 1 });
         const { context, outputPath } = globalRef;
@@ -60,8 +60,8 @@ WebpackConcatFilesPlugin.prototype.progess = function (globalRef) {
     });
 };
 
-WebpackConcatFilesPlugin.prototype.postProcess = function (globalRef) {
+WebpackAppendFilesPlugin.prototype.postProcess = function (globalRef) {
     return Promise.resolve();
 };
 
-module.exports = WebpackConcatFilesPlugin;
+module.exports = WebpackAppendFilesPlugin;

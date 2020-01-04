@@ -1,5 +1,5 @@
 {
-  "name": "webpack-concat-files-plugin",
+  "name": "webpack-append-files-plugin",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
