@@ -1,5 +1,7 @@
 # webpack-concat-files-plugin
 
+This plugin is used to concat files after webpack's `afterEmit` hook.
+
 ## Usage
 
 ``` js
